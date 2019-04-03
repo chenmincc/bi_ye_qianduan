@@ -1,0 +1,37 @@
+.category-details {
+  /* min-height: 50px; */
+  margin-top: 30px;
+}
+/* .category-details:after {
+	clear: both;
+	content: '.';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	height: 0;
+} */
+.vedio_title {
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+}
+.v_h2 {
+  position: relative;
+  margin-bottom: 6px;
+}
+.h2_top {
+  font-size: 22px;
+  color: #222;
+  line-height: 32px;
+  font-weight: bold;
+}
+.h2_top i {
+  width: 3px;
+  height: 20px;
+  background: rgba(34,34,34,1);
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+  margin-top: 6px;
+}

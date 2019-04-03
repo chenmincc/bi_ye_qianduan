@@ -1,0 +1,47 @@
+.sendGoods-content{
+  width: 1200px;
+  margin: 0 auto;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #94193f;
+  border-bottom: 1px solid #94193f;
+
+}
+.order_Status {
+  background: url(../image/order_icon_list.png) no-repeat 0 -246px;
+  height: 42px;
+  margin-top: 40px;
+  width: 415px;
+}
+
+.sendGoods{
+padding: 30px;
+font-size: 24px;
+color: #616060;
+}
+
+.btn_item {
+  height: 28px;
+  line-height: 28px;
+  padding-left: 238px;
+  padding-top: 10px;
+}
+.addr_item {
+  padding: 0;
+  margin-bottom: 24px;
+  height: 20px;
+  line-height: 20px;
+}
+.btn_addaddr, .btn_addaddr:link, .btn_addaddr:visited {
+  display: block;
+  width: 136px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background-color: #94193f;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 38px;
+  margin-top: 20px;
+}

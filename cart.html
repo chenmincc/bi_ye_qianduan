@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
+
+	</head>
+	<body>
+		<!--头部头-->
+		<div class="header_top">
+			<div class="h_t_l">
+                <div class="login_2">欢迎您，
+                <a href="#" class="yhm"></a><a href="#" class="tuichu">[退出]</a>
+            	</div>
+        	</div>
+        	<div class="h_t_r">
+            	<ul>
+	                <li><a href="#" target="_blank">合作招商</a><span class="line"></span></li>
+	                <li><a href="#">订单查询</a><span class="line"></span></li>
+	                <li><a href="#">我的快乐购</a><span class="line"></span></li>
+	                <li><i class="tel_icon"></i><span class="sp_tel">400-705-1111</span><span class="line"></span></li>
+	                <li class="d_l_hgp"><a href="#">下载快乐购app</a><span class="line"></span>
+                    <div class="down_load_hpg" style="display: none;">
+                        <div class="down_load_border">
+                            <b class="icon_top"></b>
+                            <img src="image/app.png">
+                            <p>快乐生活 快乐购</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cus_c_box"><a href="#">客服中心<b class="b_down"></b></a>
+                    <div class="cus_center" style="display: none;">
+                        <a href="#">帮助中心</a>
+                        <a href="#">会员反馈</a>
+                    </div>
+                </li>
+            </ul>
+        	</div>
+		</div>
+
+		<!--头部中心-->
+		<div class="header_center">
+        <div class="h_c_logo">
+             <a href="index.html"><img src="image/logo.jpg"></a>
+        </div>
+        <div class="h_c_right">
+            <div class="order_Status os_mycar"></div>
+        </div>
+    </div>
+
+		<!--内容-->
+		<div class="shop_tit">
+            <div class="cart_checkbox">
+                <label class="cbox_djj">
+                    <input type="checkbox" name="selectAll" class="jdcheckbox">
+                    <span>全选</span>
+                </label>
+                <span class="shop_s_name">商品</span>
+            </div>
+            <div class="column t_price">单价(元)</div>
+            <div class="column t_quantity">数量</div>
+            <div class="column t_sum">小计(元)</div>
+            <div class="column t_action">操作</div>
+        </div>
+		<div class="item_list">
+			<!--<div class="item_form">
+				<input type="checkbox" class="checkbox" checked="checked">
+				<div class="p_goods">
+					<img src="http://ecimg.happigo.com/data/upload/shop/store/goods/1/343/243343/1_05936090205348649_60.jpg" alt="royal舒息 皇家足贴10贴*2包装（经典版）">
+					<p class="p_name">royal舒息 皇家足贴10贴*2包装（经典版）</p>
+				</div>
+				<p class="p_prices2">￥79.00</p>
+				<div class="p_quantity">
+					<a class="a_decrease " href="#">-</a>
+                    <input type="text" value="1" class="itxt" >
+                    <a class="a_add" href="#">+</a>
+				</div>
+				<div class="p_sum">
+					<strong>￥<em>79.00</em></strong>
+				</div>
+				<div class="p_ops">
+                        <a href="#" class="car_remove">删除</a>
+                </div>
+			</div>-->
+
+		</div>
+
+		<div class="order_sum">
+            <div class="del_all">
+                <label class="cbox_djj">
+                    <input type="checkbox" class="deslection" name="deslectionAll" >
+                    <span>取消全选</span>
+                </label>
+            </div>
+            <div class="fr">
+                <div class="goods_num">已选商品<span><em id="sunm" style="color:#DF0010"> 0 </em></span>件</div>
+                <div class="goods_sum">
+                    <p class="sum_price">商品总价（不含运费）<span style="color:#DF0010">￥<em id="cartTotal" style="color:#DF0010">0.00</em></span></p>
+                </div>
+                <div class="btn_buy">
+                    <a href="order.html" style="background:#DF0010" class="a_btn_buy" id="next_submit">去结算</a>
+                </div>
+            </div>
+
+        </div>
+
+	<!--<div class="w1200" nc_type="table_cart">
+		<div class="showGoods">
+			<div class="car_no_goods">
+		        <img src="image/car_no_goods.jpg">
+		        <div class="no_goods">
+		            <p class="no_goods_t">亲，您的购物车空空如也，快去抢购心仪商品吧~</p>
+		            <p><a href="/" class="no_goods_buy" style="background:#DF0010">立即购买</a></p>
+		        </div>
+    		</div>
+		</div>-->
+
+	<div class="detail_lists recommend_box" id="recommend_box">
+        <div class="d_h2">
+            <ul>
+                <li class="on">猜你喜欢</li>
+            </ul>
+        </div>
+	  	<div class="detail_l_con4">
+	        <div class="noguess">暂无商品向您推荐</div>
+	    </div>
+	</div>
+
+</div>
+
+<!--底部-->
+    <div class="foot_img">
+    	<img src="image/foot_img1.jpg"/>
+    </div>
+
+    <div id="footer"></div>
+</div>
+		<script src="js/index1.js"></script>
+		<script src="js/cart.js"></script>
+		<script type="text/javascript">
+			$(".yhm").html(document.cookie.split("=")[1]);
+			$(".tuichu").click(function(){
+				document.cookie = "name=;expires=" + new Date(0);
+				alert("成功退出登录");
+				location.href="index.html";
+			})
+
+		</script>
+	</body>
+</html>

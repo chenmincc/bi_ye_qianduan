@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="css/cart.css" />
+  <link rel="stylesheet" type="text/css" href="css/sendGoods.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/public.js"></script>
+</head>
+
+<body>
+  <!--头部头-->
+  <div class="header_top">
+    <div class="h_t_l">
+      <div class="login_2">欢迎您，
+        <a href="#" class="yhm"></a><a href="#" class="tuichu">[退出]</a>
+      </div>
+    </div>
+    <div class="h_t_r">
+      <ul>
+        <li><a href="#" target="_blank">合作招商</a><span class="line"></span></li>
+        <li><a href="#">订单查询</a><span class="line"></span></li>
+        <li><a href="#">我的快乐购</a><span class="line"></span></li>
+        <li><i class="tel_icon"></i><span class="sp_tel">400-705-1111</span><span class="line"></span></li>
+        <li class="d_l_hgp"><a href="#">下载快乐购app</a><span class="line"></span>
+          <div class="down_load_hpg" style="display: none;">
+            <div class="down_load_border">
+              <b class="icon_top"></b>
+              <img src="image/app.png">
+              <p>快乐生活 快乐购</p>
+            </div>
+          </div>
+        </li>
+        <li class="cus_c_box"><a href="#">客服中心<b class="b_down"></b></a>
+          <div class="cus_center" style="display: none;">
+            <a href="#">帮助中心</a>
+            <a href="#">会员反馈</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--头部中心-->
+  <div class="header_center">
+    <div class="h_c_logo">
+         <a href="index.html"><img src="image/logo.jpg"></a>
+    </div>
+    <div class="h_c_right">
+        <div class="order_Status os_mycar"></div>
+    </div>
+</div>
+
+<!-- 内容 -->
+<div class="sendGoods-content">
+  <div class="sendGoods">
+    您的商品还未发货，请耐心等待！
+  </div>
+  <div class="addr_item btn_item">
+    <div class="btn_addaddr"> 提醒发货</div>
+  </div>
+</div>
+
+<!--底部-->
+<div class="foot_img">
+  <img src="image/foot_img1.jpg"/>
+</div>
+
+<div id="footer"></div>
+</body>
+<script src="js/index1.js"></script>
+<script src="js/order.js"></script>
+
+<script type="text/javascript">
+  $(".yhm").html(document.cookie.split("=")[1]);
+  $(".tuichu").click(function(){
+    document.cookie = "name=;expires=" + new Date(0);
+    alert("成功退出登录");
+    location.href="index.html";
+  })
+
+</script>

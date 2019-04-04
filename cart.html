@@ -142,8 +142,9 @@
 </div>
 		<script src="js/index1.js"></script>
 		<script src="js/cart.js"></script>
+		<script src="js/public.js"></script>
 		<script type="text/javascript">
-			$(".yhm").html(document.cookie.split("=")[1]);
+			$(".yhm").html(getCookie("name"));
 			$(".tuichu").click(function(){
 				document.cookie = "name=;expires=" + new Date(0);
 				alert("成功退出登录");

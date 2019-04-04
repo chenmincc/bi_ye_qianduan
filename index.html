@@ -1095,6 +1095,15 @@
 		</div>
 	</div>
 
+	<script type="text/javascript">
+		var username = document.cookie.split("=")[1].split(';')[0];
+		console.log(username)
+		if (document.cookie) {
+			$(".a_login").html("[" + username + "]");
+		} else {
+			$(".a_login").html("[登录]");
+		}
+	</script>
 	<script src="js/public.js"></script>
 	<script src="js/index1.js"></script>
 	<script src="js/search.js"></script>

@@ -59,11 +59,14 @@
 
 <!-- 内容 -->
 <div class="sendGoods-content">
-  <div class="sendGoods">
+  <div class="sendGoods-title">
+    订单查询
+  </div>
+  <div class="sendGoods" style="display:none">
     您的商品还未发货，请耐心等待！
   </div>
   <div class="addr_item btn_item">
-    <div class="btn_addaddr"> 提醒发货</div>
+    <div class="btn_chakan"> 查看 </div>
   </div>
 </div>
 
@@ -76,13 +79,41 @@
 </body>
 <script src="js/index1.js"></script>
 <script src="js/order.js"></script>
+<script src="js/public.js"></script>
 
 <script type="text/javascript">
-  $(".yhm").html(document.cookie.split("=")[1]);
+  $(".yhm").html(getCookie("name"));
   $(".tuichu").click(function(){
     document.cookie = "name=;expires=" + new Date(0);
     alert("成功退出登录");
     location.href="index.html";
   })
 
+  $('.btn_chakan').click(function () {
+    var id = location.search.split('=')[1]
+    // alert(id)
+    $.ajax({
+				type:"post",
+				url:"http://localhost:3000/order/update1",
+				data:{
+					id:id
+				},
+				success:function(res){
+					if(res.code == 0){
+            console.log(res)
+            if(res.isShow == false){
+              $('.sendGoods')[0].style.display = 'block';
+            }else{
+              $('.sendGoods').html('您的商品已经发货，谢谢！');
+              $('.sendGoods')[0].style.display = 'block';
+            }
+
+
+
+					}else if(res.code == -1){
+						alert('网络异常，请稍后再试')
+					}
+				}
+			})
+  })
 </script>

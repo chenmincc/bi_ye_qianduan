@@ -15,8 +15,14 @@
   width: 415px;
 }
 
+.sendGoods-title{
+  padding: 20px;
+  font-size: 20px;
+}
+
 .sendGoods{
-padding: 30px;
+padding: 10px;
+margin-left: 20px;
 font-size: 24px;
 color: #616060;
 }
@@ -33,7 +39,7 @@ color: #616060;
   height: 20px;
   line-height: 20px;
 }
-.btn_addaddr, .btn_addaddr:link, .btn_addaddr:visited {
+.btn_chakan, .btn_chakan:link, .btn_chakan:visited {
   display: block;
   width: 136px;
   height: 42px;

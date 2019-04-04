@@ -101,11 +101,11 @@
 </body>
 <script src="js/index1.js"></script>
 <script src="js/order.js"></script>
-
+<script src="js/public.js"></script>
 
 
 <script type="text/javascript">
-  $(".yhm").html(document.cookie.split("=")[1]);
+  $(".yhm").html(getCookie("name"));
   $(".tuichu").click(function(){
     document.cookie = "name=;expires=" + new Date(0);
     alert("成功退出登录");
@@ -123,8 +123,9 @@
 				},
 				success:function(res){
 					if(res.code == 0){
+            console.log(res)
             alert('订单已提交，我们会尽快安排发货');
-            location.href = 'sendGoods.html'
+            location.href = 'sendGoods.html?id='+res.id
 					}else if(res.code == -1){
 						alert('网络异常，请稍后再试')
 					}

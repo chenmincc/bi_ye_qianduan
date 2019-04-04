@@ -366,5 +366,15 @@
 	<script src="js/public.js"></script>
 	<script src="js/index1.js"></script>
 	<script src="js/search.js"></script>
+	<script type="text/javascript">
+		var username = getCookie("name");
+		// console.log(username)
+		// console.log(getCookie("name"))
+		if (document.cookie) {
+			$(".a_login").html("[" + username + "]");
+		} else {
+			$(".a_login").html("[登录]");
+		}
+	</script>
 </body>
 </html>

@@ -918,9 +918,12 @@
 		<div id="footer"></div>
 	</div>
 
+	<script src="js/public.js"></script>
 
 	<script type="text/javascript">
-		var username = document.cookie.split("=")[1];
+		var username = getCookie("name");
+		// console.log(username)
+		// console.log(getCookie("name"))
 		if (document.cookie) {
 			$(".a_login").html("[" + username + "]");
 		} else {

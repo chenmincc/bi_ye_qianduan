@@ -1,6 +1,6 @@
 // 判断coolie中是否有用户名，有就把“请登录”改为 “用户名”
 window.onload = function () {
-	var username= document.cookie.split("=")[1];
+	var username= getCookie("name");
 	if(document.cookie){
 		for (var i = 0; i < $(".hrefA").length; i++) {
 		$(".hrefA")[i].href += "&userName="+username;

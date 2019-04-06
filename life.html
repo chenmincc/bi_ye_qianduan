@@ -12,7 +12,6 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/public.js"></script>
 	<script src="js/category.js"></script>
-	<script src="js/search.js"></script>
 
 </head>
 
@@ -70,7 +69,7 @@
 					<i class="icon iconfont iconsearch"> </i>
 
 					<form id="form1">
-						<input autocomplete="off" hc="坚果" placeholder="坚果" id="keyword" class="txt_searchbox" type="text" name="keyword"
+						<input autocomplete="off"  id="keyword" class="txt_searchbox" type="text" name="keyword"
 						 value="">
 						<input class="btn_search" type="button" value="搜索">
 					</form>
@@ -84,18 +83,17 @@
 					</div>
 				</div>
 				<div class="search_key">
-					<a href="#" target="_blank" title="大衣"><span style="color:#f00">大衣</span></a>
-					<a href="#" target="_blank" title="保温板"> 保温板</a>
-					<a href="#" target="_blank" title="速热水龙头"><span style="color:#f00">速热水龙头</span></a>
-					<a href="#" target="_blank" title="梦洁">梦洁</a>
-					<a href="#" target="_blank" title="电热毯"><span style="color:#f00">电热毯</span></a>
-					<a href="#" target="_blank" title="双立人">双立人</a>
-					<a href="#" target="_blank" title="破壁机">破壁机</a>
-					<a href="#" target="_blank" title="取暖器"><span style="color:#f00">取暖器</span></a>
-					<a href="#" target="_blank" title="京城之霜"><span style="color:#f00">京城之霜</span></a>
-					<a href="#" target="_blank" title="康宁"><span style="color:#f00">康宁</span></a>
-					<a href="#" target="_blank" title="牛奶"><span style="color:#f00">牛奶</span></a>
-					<a href="#" target="_blank" title="羽绒服">羽绒服</a>
+					<a href="cloth.html" target="_blank" title="大衣"><span style="color:#f00">大衣</span></a>
+					<a href="life.html" target="_blank" title="保温板"> 保温板</a>
+					<a href="cook.html" target="_blank" title="速热水龙头"><span style="color:#f00">速热水龙头</span></a>
+					<a href="food.html" target="_blank" title="坚果">坚果</a>
+					<a href="life.html" target="_blank" title="电热毯"><span style="color:#f00">电热毯</span></a>
+					<a href="cook.html" target="_blank" title="双立人">双立人</a>
+					<!-- <a href="#" target="_blank" title="破壁机">破壁机</a> -->
+					<a href="life.html" target="_blank" title="取暖器"><span style="color:#f00">取暖器</span></a>
+					<a href="makeup.html" target="_blank" title="京城之霜"><span style="color:#f00">京城之霜</span></a>
+					<a href="food.html" target="_blank" title="牛奶"><span style="color:#f00">牛奶</span></a>
+					<a href="cloth.html" target="_blank" title="羽绒服">羽绒服</a>
 				</div>
 			</div>
 			<div class="h_c_right">
@@ -115,15 +113,36 @@
 						<li class="li_all_type">
 							<a href="#"><i class="iconfont b_down"></i>所有分类</a>
 						</li>
-						<li class="home  on"><a href="index.html">首页</a></li>
-						<li><a href="#">TV直播</a></li>
-            <li><a href="category.html">厨房必备</a></li>
-						<li><a href="category1.html">美妆个护</a></li>
-						<li><a href="category2.html">食品健康</a></li>
-						<li><a href="category3.html">服饰家纺</a></li>
-						<li><a href="category4.html">日用家电</a></li>
+						<li class="home"><a href="index.html">首页</a></li>
+						<!-- <li><a href="#">TV直播</a></li> -->
+            <li><a href="cook.html">厨房必备</a></li>
+						<li><a href="makeup.html">美妆个护</a></li>
+						<li><a href="food.html">食品健康</a></li>
+						<li><a href="cloth.html">服饰家纺</a></li>
+						<li class="on"><a href="life.html">日用家电</a></li>
 					</ul>
-
+					<script>
+						$('input[type=button]').click(function(){
+							// alert($('.txt_searchbox').val().indexOf('厨房'))
+							if($('.txt_searchbox').val().indexOf('厨房') != -1){
+								location.href = 'cook.html'
+							} else if ($('.txt_searchbox').val().indexOf('美妆') != -1){
+								location.href = 'makeup.html'
+							} else if ($('.txt_searchbox').val().indexOf('食品') != -1){
+								location.href = 'food.html'
+							} else if ($('.txt_searchbox').val().indexOf('服饰') != -1){
+								location.href = 'cloth.html'
+							} else if ($('.txt_searchbox').val().indexOf('衣服') != -1){
+								location.href = 'cloth.html'
+							} else if ($('.txt_searchbox').val().indexOf('日用') != -1){
+								location.href = 'life.html'
+							} else if ($('.txt_searchbox').val().indexOf('家电') != -1){
+								location.href = 'life.html'
+							} else {
+								alert('找不到该商品！')
+							}
+						})
+					</script>
 				</div>
 
 			</div>
@@ -363,18 +382,8 @@
 		</div>
 	</div>
 
-	<script src="js/public.js"></script>
 	<script src="js/index1.js"></script>
 	<script src="js/search.js"></script>
-	<script type="text/javascript">
-		var username = getCookie("name");
-		// console.log(username)
-		// console.log(getCookie("name"))
-		if (document.cookie) {
-			$(".a_login").html("[" + username + "]");
-		} else {
-			$(".a_login").html("[登录]");
-		}
-	</script>
+
 </body>
 </html>

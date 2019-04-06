@@ -37,5 +37,3 @@ $(".index_type_ul .li_has_down").hover(function () {
 	$(this).find(".nav_type_list").hide();
 });
 
-
-

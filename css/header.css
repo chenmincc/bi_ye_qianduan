@@ -1,29 +1,4 @@
-html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,img,dt,dd,dl,figure,figcaption{
-    margin:0;
-    padding: 0;
-}
-strong,b{
-    font-weight: normal;
-}
-a,u{
-    text-decoration: none;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-    font-size: 16px;
-}
-i,em{
-    font-style: normal;
-}
-ul,ol,li{
-    list-style: none;
-}
-img{
-    border:0;display:block;
-}
-input{
-    outline:none;
-}
+
 .header_top,.header_center,.nav,.footer0,.footer_help,.b1{
     width: 1090px;
     margin: 0 auto;
@@ -279,7 +254,7 @@ input{
 }
 .nav li {
 	 float: left;
-	 padding: 0 30px;
+	 padding: 0 40px;
 	 position: relative;
 	 height: 40px;
 	 line-height:40px;
@@ -297,17 +272,17 @@ input{
  }
 .nav .li_all_type a, .nav .li_all_type a:link, .nav .li_all_type a:visited {
 	color: #fff;
-	font-size: 16px;
+	font-size: 18px;
 	letter-spacing: 2px;
 }
-.nav .home { padding: 0 30px 0 60px; }
+.nav .home { padding: 0 30px 0 80px; }
 .nav li a {
 	color: #303030;
-	font-size: 16px;
+	font-size: 18px;
 }
 .nav li a:hover { color: #df0010; }
 .nav li .b_down {
-	font-size: 15px;
+	font-size: 18px;
 	margin-right: 10px;
 	margin-left: 21px;
 }
@@ -450,3 +425,8 @@ input{
 .index_type_ul .cur a.type_color {
 	color: #ce4261;
 }
+
+.nav .on a{
+	color: #DF0010;
+}
+

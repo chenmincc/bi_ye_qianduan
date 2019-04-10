@@ -18,18 +18,18 @@
 				// console.log(json)
 				console.log(res)
 				var json = res;
-				$(".location1").html(json.location1);
-				$(".location2").html(json.location2);
-				$(".span").html(json.location3);
+				$(".location1").html(json.category);
+				$(".location2").html(json.title);
+				$(".span").html(json.name);
 				$("#divw img").attr("src",'image/'+json.img0);
 				$("#big img").attr("src",'image/'+json.imgbig);
 				$(".ul-w li:nth-child(1) img").attr("src",'image/'+json.img1);
 				$(".ul-w li:nth-child(2) img").attr("src",'image/'+json.img2);
 				$(".ul-w li:nth-child(3) img").attr("src",'image/'+json.img3);
 				$(".ul-w li:nth-child(4) img").attr("src",'image/'+json.img4);
-				$(".detail_tit b").html(json.location3);
-				$(".sp_hot i").html(json.em);
-				$(".detail_tit_md").html(json.h2);
+				$(".detail_tit b").html(json.name);
+				$(".sp_hot i").html(json.briefIntroduction);
+				$(".detail_tit_md").html(json.introduction);
 				$(".price_now b").html(json.klj);
 				$(".price_box del").html(json.del);
 			}

@@ -1,10 +1,3 @@
-$('input[type=button]').click(function(){
-  alert(3)
-})
-
-
-
-
 var oul = document.getElementById("oul");
 
 $('#keyword').keyup = function(){
@@ -24,6 +17,16 @@ function box(res){
   }
   oul.innerHTML = str;
 }
+
+
+$('input[type=button]').click(function(){
+  var keyword = $('.txt_searchbox').val()
+  location.href = 'category.html?keyword='+ keyword
+})
+
+
+
+
 
 
 

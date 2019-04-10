@@ -3,7 +3,7 @@ $.ajax({
 	type:"post",
 	url:"http://localhost:3000/goods/searchCategory",
 	data:{
-		category:'个护美妆',
+		category:'食品健康',
 	},
 	success: function (res) {
 		// var json = JSON.parse(res);

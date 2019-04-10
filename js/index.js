@@ -71,8 +71,8 @@ $.ajax({
 						</p>
 					</div>
 					<div>
-						<p class="g_other_info">${json[i].em}</p>
-						<p class="p_title">${json[i].location3}</p>
+						<p class="g_other_info">${json[i].briefIntroduction}</p>
+						<p class="p_title">${json[i].name}</p>
 					</div>
 					<p class="p_p">
 						<span class="price1">￥<span>${json[i].klj}</span></span>

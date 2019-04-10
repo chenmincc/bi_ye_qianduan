@@ -78,7 +78,7 @@ $(function(){
 											<input type="checkbox" class="checkbox" >
 											<div class="p_goods">
 												<img src="image/${this.goods[i].img0}">
-												<p class="p_name">${this.goods[i].location3}</p>
+												<p class="p_name">${this.goods[i].name}</p>
 											</div>
 											<input class="bid" type="hidden" value="${cartGoodsInfoJson[j].bid}"/>
 											<p class="p_prices2">${this.goods[i].klj}</p>
